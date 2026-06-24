@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashionxpression | Where Heritage Meets Haute Couture</title>
+  <meta name="description" content="Bespoke African fashion crafted with precision. Discover authentic textiles and bespoke tailoring that celebrates your unique style and heritage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-body text-[#1E1B4B]">
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="mb-6">
+      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="none" stroke="white" stroke-width="1.5" font-family="Playfair Display" font-size="36" font-weight="600" class="loader-monogram">Fx</text>
+    </svg>
+    <p class="text-white text-lg tracking-[0.2em] uppercase" style="font-family: var(--font-body); font-size: 0.875rem;">Fashionxpression</p>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor hidden lg:block"></div>
+
+  <!-- Navigation -->
+  <nav class="main-nav fixed top-0 left-0 right-0 z-[1000] transition-all duration-400" style="height: 80px;">
+    <div class="content-wrapper flex items-center justify-between h-full">
+      <!-- Logo -->
+      <a href="./index.html" class="flex items-center gap-2 z-10">
+        <span class="text-2xl font-semibold" style="font-family: var(--font-display); color: var(--deep-navy);">Fx</span>
+        <span class="hidden sm:inline text-sm font-medium tracking-wide" style="font-family: var(--font-body);">Fashionxpression</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="./collection.html" class="nav-link">Collection</a>
+        <a href="./fabrics.html" class="nav-link">Fabrics</a>
+        <a href="./bespoke.html" class="nav-link">Bespoke</a>
+        <a href="./measurements.html" class="nav-link">Measurements</a>
+        <a href="./lookbook.html" class="nav-link">Lookbook</a>
+        <a href="./journal.html" class="nav-link">Journal</a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-4 z-10">
+        <button class="search-toggle p-2 hover:opacity-70 transition-opacity" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="./bespoke.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Book Now</a>
+        <button class="menu-toggle lg:hidden p-2" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="menu-close absolute top-6 right-6 text-white p-2" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <a href="./collection.html" style="transition-delay: 0.1s">Collection</a>
+    <a href="./fabrics.html" style="transition-delay: 0.15s">Fabrics</a>
+    <a href="./bespoke.html" style="transition-delay: 0.2s">Bespoke</a>
+    <a href="./measurements.html" style="transition-delay: 0.25s">Measurements</a>
+    <a href="./lookbook.html" style="transition-delay: 0.3s">Lookbook</a>
+    <a href="./journal.html" style="transition-delay: 0.35s">Journal</a>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay fixed inset-0 z-[999] bg-white/95 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <button class="search-close absolute top-6 right-6 p-2 hover:opacity-70" aria-label="Close search">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="w-full max-w-2xl px-6">
+      <input type="text" placeholder="Search..." class="w-full text-3xl pb-4 border-b-2 border-[#6B21A8] outline-none bg-transparent" style="font-family: var(--font-display);">
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <!-- Slides -->
+    <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="opacity: 1;">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="./assets/hero-slide-1.jpg" alt="Fashion editorial" class="w-full h-full object-cover" style="animation: kenburns 5s ease-out forwards;">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.25), rgba(30,27,75,0.65));"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="content-wrapper max-w-[640px]">
+          <h1 class="hero-headline text-hero text-white mb-6" style="text-shadow: 0 2px 30px rgba(0,0,0,0.4);">Bespoke African Fashion, Crafted for You</h1>
+          <p class="hero-subhead text-body-large text-white/80 mb-8">Discover authentic textiles and bespoke tailoring that celebrates your unique style and heritage.</p>
+          <div class="hero-ctas flex flex-wrap gap-4">
+            <a href="./bespoke.html" class="btn btn-primary">Book Consultation</a>
+            <a href="./collection.html" class="btn btn-secondary-white">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="opacity: 0;">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="./assets/hero-slide-2.jpg" alt="Man in agbada" class="w-full h-full object-cover" style="animation: kenburns 5s ease-out forwards;">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.25), rgba(30,27,75,0.65));"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="content-wrapper max-w-[640px]">
+          <h1 class="hero-headline text-hero text-white mb-6" style="text-shadow: 0 2px 30px rgba(0,0,0,0.4);">Where Heritage Meets Haute Couture</h1>
+          <p class="hero-subhead text-body-large text-white/80 mb-8">From Ankara to Aso Oke, every fabric tells a story. Let us weave yours.</p>
+          <div class="hero-ctas flex flex-wrap gap-4">
+            <a href="./bespoke.html" class="btn btn-primary">Book Consultation</a>
+            <a href="./collection.html" class="btn btn-secondary-white">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="opacity: 0;">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="./assets/hero-slide-3.jpg" alt="Tailor at work" class="w-full h-full object-cover" style="animation: kenburns 5s ease-out forwards;">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.25), rgba(30,27,75,0.65));"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="content-wrapper max-w-[640px]">
+          <h1 class="hero-headline text-hero text-white mb-6" style="text-shadow: 0 2px 30px rgba(0,0,0,0.4);">Your Perfect Fit, Tailored with Precision</h1>
+          <p class="hero-subhead text-body-large text-white/80 mb-8">Master craftsmen, premium fabrics, and measurements that honor your silhouette.</p>
+          <div class="hero-ctas flex flex-wrap gap-4">
+            <a href="./bespoke.html" class="btn btn-primary">Book Consultation</a>
+            <a href="./collection.html" class="btn btn-secondary-white">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="opacity: 0;">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="./assets/hero-slide-4.jpg" alt="Nigerian bride" class="w-full h-full object-cover" style="animation: kenburns 5s ease-out forwards;">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.25), rgba(30,27,75,0.65));"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="content-wrapper max-w-[640px]">
+          <h1 class="hero-headline text-hero text-white mb-6" style="text-shadow: 0 2px 30px rgba(0,0,0,0.4);">Wedding Elegance, Nigerian Grandeur</h1>
+          <p class="hero-subhead text-body-large text-white/80 mb-8">Make your special day unforgettable with our bespoke bridal and aso-ebi collections.</p>
+          <div class="hero-ctas flex flex-wrap gap-4">
+            <a href="./bespoke.html" class="btn btn-primary">Book Consultation</a>
+            <a href="./collection.html" class="btn btn-secondary-white">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="opacity: 0;">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="./assets/hero-slide-5.jpg" alt="Fashion runway" class="w-full h-full object-cover" style="animation: kenburns 5s ease-out forwards;">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.25), rgba(30,27,75,0.65));"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="content-wrapper max-w-[640px]">
+          <h1 class="hero-headline text-hero text-white mb-6" style="text-shadow: 0 2px 30px rgba(0,0,0,0.4);">From Sketch to Runway</h1>
+          <p class="hero-subhead text-body-large text-white/80 mb-8">Explore our latest lookbook — editorial fashion that redefines African luxury.</p>
+          <div class="hero-ctas flex flex-wrap gap-4">
+            <a href="./bespoke.html" class="btn btn-primary">Book Consultation</a>
+            <a href="./collection.html" class="btn btn-secondary-white">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Navigation -->
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-10">
+      <div class="w-32 h-[2px] bg-white/20 rounded-full overflow-hidden">
+        <div class="hero-progress h-full bg-white/60 rounded-full" style="width: 0%;"></div>
+      </div>
+      <div class="flex gap-3">
+        <button class="hero-dot w-2 h-2 rounded-full border border-white/40 bg-transparent transition-all" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot w-2 h-2 rounded-full border border-white/40 bg-transparent transition-all" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot w-2 h-2 rounded-full border border-white/40 bg-transparent transition-all" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-dot w-2 h-2 rounded-full border border-white/40 bg-transparent transition-all" data-slide="3" aria-label="Slide 4"></button>
+        <button class="hero-dot w-2 h-2 rounded-full border border-white/40 bg-transparent transition-all" data-slide="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="animate-bounce-chevron mt-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COLLECTION CATEGORIES ==================== -->
+  <section class="section-padding" style="background: var(--off-white);">
+    <div class="content-wrapper">
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-eyebrow mb-3">Explore</p>
+        <h2 class="text-section-title mb-4">Our Collections</h2>
+        <p class="text-[#1E1B4B]/60 max-w-lg mx-auto">From everyday essentials to once-in-a-lifetime moments</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-[-20px]" style="perspective: 1000px;">
+        <!-- Card 1: Ankara -->
+        <div class="tilt-card w-[260px] h-[360px] rounded-2xl overflow-hidden relative cursor-pointer m-[-10px] scroll-reveal stagger-1" style="box-shadow: var(--card-rest);">
+          <img src="./assets/cat-ankara.jpg" alt="Ankara Essentials" class="w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(30,27,75,0.8), transparent 60%);"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <h3 class="text-white text-xl mb-1" style="font-family: var(--font-display);">Ankara Essentials</h3>
+            <p class="text-white/70 text-sm mb-3">Bold prints for every day</p>
+            <span class="text-white/0 text-sm font-medium transition-all duration-300 group-hover:text-white flex items-center gap-1" style="font-family: var(--font-body);">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+
+        <!-- Card 2: Wedding -->
+        <div class="tilt-card w-[260px] h-[360px] rounded-2xl overflow-hidden relative cursor-pointer m-[-10px] scroll-reveal stagger-2" style="box-shadow: var(--card-rest);">
+          <img src="./assets/cat-wedding.jpg" alt="Wedding Collection" class="w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(30,27,75,0.8), transparent 60%);"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <h3 class="text-white text-xl mb-1" style="font-family: var(--font-display);">Wedding Collection</h3>
+            <p class="text-white/70 text-sm mb-3">Aso-ebi & bridal elegance</p>
+            <span class="text-white/0 text-sm font-medium transition-all duration-300 group-hover:text-white flex items-center gap-1">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+
+        <!-- Card 3: Men's Agbada -->
+        <div class="tilt-card w-[260px] h-[360px] rounded-2xl overflow-hidden relative cursor-pointer m-[-10px] scroll-reveal stagger-3" style="box-shadow: var(--card-rest);">
+          <img src="./assets/cat-agbada.jpg" alt="Men's Agbada" class="w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(30,27,75,0.8), transparent 60%);"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <h3 class="text-white text-xl mb-1" style="font-family: var(--font-display);">Men's Agbada</h3>
+            <p class="text-white/70 text-sm mb-3">Regal traditional wear</p>
+            <span class="text-white/0 text-sm font-medium transition-all duration-300 group-hover:text-white flex items-center gap-1">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+
+        <!-- Card 4: Ready to Wear -->
+        <div class="tilt-card w-[260px] h-[360px] rounded-2xl overflow-hidden relative cursor-pointer m-[-10px] scroll-reveal stagger-4" style="box-shadow: var(--card-rest);">
+          <img src="./assets/cat-ready.jpg" alt="Ready-to-Wear" class="w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(30,27,75,0.8), transparent 60%);"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <h3 class="text-white text-xl mb-1" style="font-family: var(--font-display);">Ready-to-Wear</h3>
+            <p class="text-white/70 text-sm mb-3">Contemporary African style</p>
+            <span class="text-white/0 text-sm font-medium transition-all duration-300 group-hover:text-white flex items-center gap-1">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+
+        <!-- Card 5: Accessories -->
+        <div class="tilt-card w-[260px] h-[360px] rounded-2xl overflow-hidden relative cursor-pointer m-[-10px] scroll-reveal stagger-5" style="box-shadow: var(--card-rest);">
+          <img src="./assets/cat-accessories.jpg" alt="Accessories" class="w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(30,27,75,0.8), transparent 60%);"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <h3 class="text-white text-xl mb-1" style="font-family: var(--font-display);">Accessories</h3>
+            <p class="text-white/70 text-sm mb-3">Gele, bags & jewelry</p>
+            <span class="text-white/0 text-sm font-medium transition-all duration-300 group-hover:text-white flex items-center gap-1">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PRODUCTS ==================== -->
+  <section class="section-padding product-filter-container">
+    <div class="content-wrapper">
+      <div class="text-center mb-12 scroll-reveal">
+        <p class="text-eyebrow mb-3">Curated for You</p>
+        <h2 class="text-section-title mb-8">Featured Pieces</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="traditional">Traditional</button>
+          <button class="filter-pill" data-filter="contemporary">Contemporary</button>
+          <button class="filter-pill" data-filter="accessories">Accessories</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div class="filterable-item scroll-reveal stagger-1" data-category="traditional">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-ankara-gown.jpg" alt="Royal Purple Ankara Gown" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Traditional</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Royal Purple Ankara Gown</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;85,000</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="filterable-item scroll-reveal stagger-2" data-category="traditional">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-agbada-set.jpg" alt="Navy Blue Agbada Set" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Traditional</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Navy Blue Agbada Set</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;120,000</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="filterable-item scroll-reveal stagger-3" data-category="contemporary">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-aso-oke-blazer.jpg" alt="Silk Aso-Oke Blazer" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Contemporary</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Silk Aso-Oke Blazer</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;95,000</p>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="filterable-item scroll-reveal stagger-4" data-category="contemporary">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-adire-dress.jpg" alt="Adire Print Midi Dress" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Contemporary</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Adire Print Midi Dress</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;65,000</p>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="filterable-item scroll-reveal stagger-5" data-category="traditional">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-kaftan.jpg" alt="Gold-Trimmed Kaftan" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Traditional</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Gold-Trimmed Kaftan</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;78,000</p>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="filterable-item scroll-reveal stagger-6" data-category="accessories">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-bag.jpg" alt="Ankara Crossbody Bag" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Accessories</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Ankara Crossbody Bag</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;25,000</p>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="filterable-item scroll-reveal stagger-7" data-category="traditional">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-lace-wrapper.jpg" alt="Lace Embroidered Wrapper" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Traditional</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Lace Embroidered Wrapper</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;55,000</p>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="filterable-item scroll-reveal stagger-8" data-category="contemporary">
+          <div class="product-card">
+            <div class="relative" style="aspect-ratio: 3/4;">
+              <img src="./assets/prod-batik-shirt.jpg" alt="Batik Print Shirt" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+              <div class="product-card-overlay rounded-2xl">
+                <span class="text-white font-medium">Quick View</span>
+                <button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors" aria-label="Add to wishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="pill-tag pill-tag-lavender mt-4 inline-block">Contemporary</span>
+            <h3 class="mt-2 text-lg font-medium" style="font-family: var(--font-display);">Batik Print Shirt</h3>
+            <p class="text-[#6B21A8] font-semibold mt-1">&#8358;42,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FABRIC SHOWCASE ==================== -->
+  <section class="section-padding relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30" style="background: linear-gradient(90deg, #E9D5FF, #DBEAFE, #E9D5FF); background-size: 200% 100%; animation: shimmer 20s linear infinite;"></div>
+    <div class="content-wrapper relative z-10">
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-eyebrow mb-3">The Foundation</p>
+        <h2 class="text-section-title mb-4">Our Fabric Library</h2>
+        <p class="text-[#1E1B4B]/60 max-w-lg mx-auto">Drag to explore our curated collection of authentic African textiles</p>
+      </div>
+    </div>
+
+    <div class="drag-scroll gap-6 relative z-10 pb-4">
+      <!-- Fabric 1: Ankara -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-1">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-ankara.jpg" alt="Ankara fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Ankara</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Yoruba Origin</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Vibrant wax-printed cotton fabric known for its bold geometric and floral patterns.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 2: Kente -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-2">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-kente.jpg" alt="Kente fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Kente</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Akan Origin</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Handwoven silk and cotton strips featuring intricate geometric designs.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 3: Aso Oke -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-3">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-asooke.jpg" alt="Aso Oke fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Aso Oke</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Yoruba Origin</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Hand-loomed cloth traditionally woven by the Yoruba people with metallic threads.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 4: Adire -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-4">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-adire.jpg" alt="Adire fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Adire</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Yoruba Origin</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Indigo-dyed cloth created using resist-dyeing techniques. Each piece is unique.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 5: Lace -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-5">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-lace.jpg" alt="Lace fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Lace</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">European/African Fusion</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Delicate embroidered net fabric adapted into African fashion with sequins and beads.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 6: Brocade -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-6">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-brocade.jpg" alt="Brocade fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Brocade</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Global Heritage</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Richly decorative shuttle-woven fabric with raised floral or geometric patterns.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 7: Silk -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-7">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-silk.jpg" alt="Silk fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Silk</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Asian/African Blend</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Luxurious natural silk fabric, often printed with African-inspired motifs.</p>
+        </div>
+      </div>
+
+      <!-- Fabric 8: Velvet -->
+      <div class="w-[320px] flex-shrink-0 scroll-reveal-right stagger-8">
+        <div class="rounded-t-2xl overflow-hidden" style="height: 280px;">
+          <img src="./assets/fabric-velvet.jpg" alt="Velvet fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="bg-white p-6 rounded-b-2xl">
+          <h3 class="text-xl font-medium mb-2" style="font-family: var(--font-display);">Velvet</h3>
+          <span class="pill-tag pill-tag-lavender text-xs mb-3 inline-block">Global Heritage</span>
+          <p class="text-sm text-[#1E1B4B]/60 line-clamp-2">Soft, plush woven fabric with a dense pile. Deep jewel tones for royal attire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section-padding" style="background: #E9D5FF;">
+    <div class="content-wrapper max-w-[700px]">
+      <div class="text-center mb-12 scroll-reveal">
+        <p class="text-eyebrow mb-3">Testimonials</p>
+        <h2 class="text-section-title">What Our Clients Say</h2>
+      </div>
+
+      <div class="testimonial-carousel relative">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide text-center" style="opacity: 1;">
+          <span class="block text-8xl leading-none opacity-20" style="font-family: var(--font-accent); color: var(--royal-purple);">&ldquo;</span>
+          <p class="text-xl italic -mt-8 mb-8" style="font-family: var(--font-accent); color: var(--deep-navy);">Fashionxpression made my wedding gown beyond my wildest dreams. Every bead, every stitch was perfection. I felt like royalty on my special day.</p>
+          <div class="flex items-center justify-center gap-4">
+            <img src="./assets/testimonial-1.jpg" alt="Amara Okafor" class="w-16 h-16 rounded-full object-cover border-[3px] border-[#6B21A8]">
+            <div class="text-left">
+              <p class="font-semibold">Amara Okafor</p>
+              <p class="text-sm text-[#1E1B4B]/60">Lagos, Nigeria</p>
+              <div class="star-rating mt-1">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide text-center absolute inset-0" style="opacity: 0; pointer-events: none;">
+          <span class="block text-8xl leading-none opacity-20" style="font-family: var(--font-accent); color: var(--royal-purple);">&ldquo;</span>
+          <p class="text-xl italic -mt-8 mb-8" style="font-family: var(--font-accent); color: var(--deep-navy);">The bespoke consultation process was so personal. They understood exactly what I wanted for my agbada. The fit is impeccable.</p>
+          <div class="flex items-center justify-center gap-4">
+            <img src="./assets/testimonial-2.jpg" alt="Chioma Adeyemi" class="w-16 h-16 rounded-full object-cover border-[3px] border-[#6B21A8]">
+            <div class="text-left">
+              <p class="font-semibold">Chioma Adeyemi</p>
+              <p class="text-sm text-[#1E1B4B]/60">Abuja, Nigeria</p>
+              <div class="star-rating mt-1">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide text-center absolute inset-0" style="opacity: 0; pointer-events: none;">
+          <span class="block text-8xl leading-none opacity-20" style="font-family: var(--font-accent); color: var(--royal-purple);">&ldquo;</span>
+          <p class="text-xl italic -mt-8 mb-8" style="font-family: var(--font-accent); color: var(--deep-navy);">I've been ordering ready-to-wear for two years now. The quality is consistently outstanding, and the fabrics are always authentic.</p>
+          <div class="flex items-center justify-center gap-4">
+            <img src="./assets/testimonial-3.jpg" alt="Emmanuel Nwosu" class="w-16 h-16 rounded-full object-cover border-[3px] border-[#6B21A8]">
+            <div class="text-left">
+              <p class="font-semibold">Emmanuel Nwosu</p>
+              <p class="text-sm text-[#1E1B4B]/60">Port Harcourt, Nigeria</p>
+              <div class="star-rating mt-1">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-slide text-center absolute inset-0" style="opacity: 0; pointer-events: none;">
+          <span class="block text-8xl leading-none opacity-20" style="font-family: var(--font-accent); color: var(--royal-purple);">&ldquo;</span>
+          <p class="text-xl italic -mt-8 mb-8" style="font-family: var(--font-accent); color: var(--deep-navy);">From virtual measurement to doorstep delivery, the experience was seamless. My Adire dress fits like it was made just for me — because it was!</p>
+          <div class="flex items-center justify-center gap-4">
+            <img src="./assets/testimonial-4.jpg" alt="Fatima Ibrahim" class="w-16 h-16 rounded-full object-cover border-[3px] border-[#6B21A8]">
+            <div class="text-left">
+              <p class="font-semibold">Fatima Ibrahim</p>
+              <p class="text-sm text-[#1E1B4B]/60">Kano, Nigeria</p>
+              <div class="star-rating mt-1">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-center gap-4 mt-10">
+          <button class="testimonial-prev w-10 h-10 rounded-full border border-[#6B21A8]/30 flex items-center justify-center hover:bg-[#E9D5FF] transition-colors" aria-label="Previous testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B21A8" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="flex gap-2">
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-[#6B21A8]" aria-label="Testimonial 1"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-[#6B21A8]/30" aria-label="Testimonial 2"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-[#6B21A8]/30" aria-label="Testimonial 3"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-[#6B21A8]/30" aria-label="Testimonial 4"></button>
+          </div>
+          <button class="testimonial-next w-10 h-10 rounded-full border border-[#6B21A8]/30 flex items-center justify-center hover:bg-[#E9D5FF] transition-colors" aria-label="Next testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B21A8" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE PROCESS ==================== -->
+  <section class="section-padding">
+    <div class="content-wrapper max-w-[800px]">
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-eyebrow mb-3">How It Works</p>
+        <h2 class="text-section-title">The Bespoke Journey</h2>
+      </div>
+
+      <div class="timeline-container relative">
+        <div class="timeline-line"></div>
+        <div class="timeline-fill" style="height: 0%;"></div>
+
+        <!-- Step 1 -->
+        <div class="timeline-step relative flex items-start mb-16 md:mb-24">
+          <div class="hidden md:block w-1/2 pr-12 text-right">
+            <h3 class="text-subsection-title mb-2">Consultation</h3>
+            <p class="text-[#1E1B4B]/70">Share your vision with our design team. Discuss style preferences, fabric choices, occasion requirements, and budget during a personalized session.</p>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#6B21A8] text-white flex items-center justify-center font-semibold text-lg z-10">1</div>
+          <div class="md:hidden pl-16">
+            <h3 class="text-subsection-title mb-2">Consultation</h3>
+            <p class="text-[#1E1B4B]/70">Share your vision with our design team. Discuss style preferences, fabric choices, occasion requirements, and budget during a personalized session.</p>
+          </div>
+          <div class="hidden md:block w-1/2 pl-12"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step relative flex items-start mb-16 md:mb-24">
+          <div class="hidden md:block w-1/2 pr-12"></div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#6B21A8] text-white flex items-center justify-center font-semibold text-lg z-10">2</div>
+          <div class="pl-16 md:pl-12 md:w-1/2">
+            <h3 class="text-subsection-title mb-2">Measurement</h3>
+            <p class="text-[#1E1B4B]/70">Our master tailors take precise measurements using our proven system. Choose an in-studio session or follow our guided virtual measurement process.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step relative flex items-start mb-16 md:mb-24">
+          <div class="hidden md:block w-1/2 pr-12 text-right">
+            <h3 class="text-subsection-title mb-2">Fitting</h3>
+            <p class="text-[#1E1B4B]/70">We create your garment and schedule a fitting session. Adjustments are made to ensure every seam, drape, and detail is absolutely perfect.</p>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#6B21A8] text-white flex items-center justify-center font-semibold text-lg z-10">3</div>
+          <div class="md:hidden pl-16">
+            <h3 class="text-subsection-title mb-2">Fitting</h3>
+            <p class="text-[#1E1B4B]/70">We create your garment and schedule a fitting session. Adjustments are made to ensure every seam, drape, and detail is absolutely perfect.</p>
+          </div>
+          <div class="hidden md:block w-1/2 pl-12"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step relative flex items-start">
+          <div class="hidden md:block w-1/2 pr-12"></div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#6B21A8] text-white flex items-center justify-center font-semibold text-lg z-10">4</div>
+          <div class="pl-16 md:pl-12 md:w-1/2">
+            <h3 class="text-subsection-title mb-2">Delivery</h3>
+            <p class="text-[#1E1B4B]/70">Your bespoke piece is carefully packaged and delivered to your door — or ready for pickup at our Lekki studio. Includes care instructions for longevity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="relative overflow-hidden" style="background: var(--purple-deep-gradient); padding: clamp(4rem, 10vw, 6rem) 0;">
+    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="content-wrapper max-w-[700px] text-center relative z-10 scroll-reveal">
+      <h2 class="text-section-title text-white mb-4">Ready for Your Perfect Fit?</h2>
+      <p class="text-body-large text-white/80 mb-10">Book a bespoke consultation and let our master tailors create something uniquely yours.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="./bespoke.html" class="btn btn-gold">Book Consultation</a>
+        <a href="./measurements.html" class="btn btn-secondary-white">Measurement Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background: var(--footer-gradient);">
+    <div class="content-wrapper py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Column 1: Brand -->
+        <div>
+          <a href="./index.html" class="flex items-center gap-2 mb-4">
+            <span class="text-2xl font-semibold text-[#6B21A8]" style="font-family: var(--font-display);">Fx</span>
+            <span class="text-sm font-medium" style="font-family: var(--font-body);">Fashionxpression</span>
+          </a>
+          <p class="text-sm text-[#1E1B4B]/70 mb-6 leading-relaxed">Fashionxpression — Where Heritage Meets Haute Couture. Bespoke African fashion crafted with precision, passion, and cultural pride.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-[#1E1B4B] hover:text-[#6B21A8] hover:scale-110 transition-all" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="text-[#1E1B4B] hover:text-[#6B21A8] hover:scale-110 transition-all" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="text-[#1E1B4B] hover:text-[#6B21A8] hover:scale-110 transition-all" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+            <a href="#" class="text-[#1E1B4B] hover:text-[#6B21A8] hover:scale-110 transition-all" aria-label="Pinterest">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.4.04-3.44l1.43-6.07s-.36-.72-.36-1.78c0-1.67.97-2.92 2.17-2.92 1.02 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-.99 4.01-.28 1.19.6 2.16 1.77 2.16 2.13 0 3.76-2.24 3.76-5.48 0-2.87-2.06-4.87-5-4.87-3.4 0-5.4 2.55-5.4 5.19 0 1.03.4 2.13.89 2.73.1.12.11.22.08.34l-.33 1.36c-.05.22-.18.27-.4.16-1.5-.7-2.43-2.88-2.43-4.64 0-3.78 2.75-7.25 7.92-7.25 4.16 0 7.4 2.97 7.4 6.93 0 4.14-2.6 7.46-6.22 7.46-1.21 0-2.36-.63-2.75-1.38l-.75 2.85c-.27 1.04-1 2.35-1.5 3.15A12 12 0 1 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <p class="text-eyebrow mb-4">Quick Links</p>
+          <ul class="space-y-3">
+            <li><a href="./collection.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Collection</a></li>
+            <li><a href="./fabrics.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Fabrics</a></li>
+            <li><a href="./bespoke.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Bespoke</a></li>
+            <li><a href="./measurements.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Measurements</a></li>
+            <li><a href="./lookbook.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Lookbook</a></li>
+            <li><a href="./journal.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Journal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div>
+          <p class="text-eyebrow mb-4">Our Services</p>
+          <ul class="space-y-3">
+            <li><a href="./bespoke.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="./collection.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Ready-to-Wear</a></li>
+            <li><span class="text-sm text-[#1E1B4B]/80">Alterations</span></li>
+            <li><a href="./bespoke.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">Consultations</a></li>
+            <li><span class="text-sm text-[#1E1B4B]/80">Corporate Orders</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div>
+          <p class="text-eyebrow mb-4">Get in Touch</p>
+          <ul class="space-y-3">
+            <li class="text-sm text-[#1E1B4B]/80">12 Admiralty Way, Lekki Phase 1, Lagos, Nigeria</li>
+            <li><a href="tel:+2348034567890" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">+234 803 456 7890</a></li>
+            <li><a href="https://wa.me/2348034567890" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">+234 803 456 7890 (WhatsApp)</a></li>
+            <li><a href="mailto:hello@fashionxpression.com" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8] transition-colors">hello@fashionxpression.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="border-t border-[#E5E7EB] mt-12 pt-12">
+        <div class="max-w-lg mx-auto text-center">
+          <h3 class="text-subsection-title mb-2">Join the Fx Insider</h3>
+          <p class="text-[#1E1B4B]/60 mb-6">Exclusive previews, styling tips, and bespoke offers delivered to your inbox.</p>
+          <form class="newsletter-form flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border-b-2 border-[#6B21A8] bg-transparent outline-none focus:border-[#7C3AED] transition-colors" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="newsletter-success hidden mt-4">Welcome to the Fx family &#10003;</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="background: var(--soft-navy);" class="py-6">
+      <div class="content-wrapper flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/60 text-xs">&copy; 2026 Fashionxpression. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/60 text-xs hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/60 text-xs hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
