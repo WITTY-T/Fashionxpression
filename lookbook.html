@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lookbook | Fashionxpression</title>
+  <meta name="description" content="Editorial fashion that celebrates African heritage through a modern lens. Explore our gallery of bridal, evening, casual, and traditional looks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/main-D4NIitfh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DbzqnTP-.css">
+</head>
+<body class="font-body text-[#1E1B4B]">
+  <div class="page-loader">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="mb-6">
+      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="none" stroke="white" stroke-width="1.5" font-family="Playfair Display" font-size="36" font-weight="600" class="loader-monogram">Fx</text>
+    </svg>
+    <p class="text-white text-lg tracking-[0.2em] uppercase" style="font-family: var(--font-body); font-size: 0.875rem;">Fashionxpression</p>
+  </div>
+
+  <div class="custom-cursor hidden lg:block"></div>
+
+  <nav class="main-nav fixed top-0 left-0 right-0 z-[1000] transition-all duration-400" style="height: 80px;">
+    <div class="content-wrapper flex items-center justify-between h-full">
+      <a href="./index.html" class="flex items-center gap-2 z-10">
+        <span class="text-2xl font-semibold" style="font-family: var(--font-display); color: var(--deep-navy);">Fx</span>
+        <span class="hidden sm:inline text-sm font-medium tracking-wide">Fashionxpression</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="./collection.html" class="nav-link">Collection</a>
+        <a href="./fabrics.html" class="nav-link">Fabrics</a>
+        <a href="./bespoke.html" class="nav-link">Bespoke</a>
+        <a href="./measurements.html" class="nav-link">Measurements</a>
+        <a href="./lookbook.html" class="nav-link active">Lookbook</a>
+        <a href="./journal.html" class="nav-link">Journal</a>
+      </div>
+      <div class="flex items-center gap-4 z-10">
+        <a href="./bespoke.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Book Now</a>
+        <button class="menu-toggle lg:hidden p-2" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <button class="menu-close absolute top-6 right-6 text-white p-2" aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="./collection.html" style="transition-delay: 0.1s">Collection</a>
+    <a href="./fabrics.html" style="transition-delay: 0.15s">Fabrics</a>
+    <a href="./bespoke.html" style="transition-delay: 0.2s">Bespoke</a>
+    <a href="./measurements.html" style="transition-delay: 0.25s">Measurements</a>
+    <a href="./lookbook.html" style="transition-delay: 0.3s">Lookbook</a>
+    <a href="./journal.html" style="transition-delay: 0.35s">Journal</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[70vh] min-h-[450px] overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0">
+      <div class="grid grid-cols-3 gap-1 h-full opacity-40">
+        <img src="./assets/look-1.jpg" class="w-full h-full object-cover" alt="">
+        <img src="./assets/look-3.jpg" class="w-full h-full object-cover" alt="">
+        <img src="./assets/look-5.jpg" class="w-full h-full object-cover" alt="">
+        <img src="./assets/look-7.jpg" class="w-full h-full object-cover" alt="">
+        <img src="./assets/look-9.jpg" class="w-full h-full object-cover" alt="">
+        <img src="./assets/look-11.jpg" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,27,75,0.5), rgba(30,27,75,0.8));"></div>
+    </div>
+    <div class="relative z-10 text-center px-6">
+      <p class="breadcrumb mb-4"><a href="./index.html">Home</a> <span>/</span> Lookbook</p>
+      <h1 class="text-white mb-4" style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 600; line-height: 1; text-shadow: 0 2px 30px rgba(0,0,0,0.4);">The Lookbook</h1>
+      <p class="text-body-large text-white/70 max-w-[600px] mx-auto">Editorial fashion that celebrates African heritage through a modern lens.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter -->
+  <div class="sticky top-0 z-40 bg-white border-b border-[#E5E7EB] py-4 masonry-filter-container">
+    <div class="content-wrapper flex flex-wrap justify-center gap-3">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="bridal">Bridal</button>
+      <button class="filter-pill" data-filter="evening">Evening</button>
+      <button class="filter-pill" data-filter="casual">Casual</button>
+      <button class="filter-pill" data-filter="traditional">Traditional</button>
+    </div>
+  </div>
+
+  <!-- Masonry Gallery -->
+  <section class="section-padding pb-8">
+    <div class="content-wrapper">
+      <div class="masonry-grid">
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="bridal" data-lightbox="./assets/look-1.jpg">
+          <img src="./assets/look-1.jpg" alt="Bridal" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Bridal</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="evening" data-lightbox="./assets/look-2.jpg">
+          <img src="./assets/look-2.jpg" alt="Evening" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Evening</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="traditional" data-lightbox="./assets/look-3.jpg">
+          <img src="./assets/look-3.jpg" alt="Traditional" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Traditional</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="casual" data-lightbox="./assets/look-4.jpg">
+          <img src="./assets/look-4.jpg" alt="Casual" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Casual</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="bridal" data-lightbox="./assets/look-5.jpg">
+          <img src="./assets/look-5.jpg" alt="Bridal" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Bridal</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="evening" data-lightbox="./assets/look-6.jpg">
+          <img src="./assets/look-6.jpg" alt="Evening" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Evening</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="traditional" data-lightbox="./assets/look-7.jpg">
+          <img src="./assets/look-7.jpg" alt="Traditional" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Traditional</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="casual" data-lightbox="./assets/look-8.jpg">
+          <img src="./assets/look-8.jpg" alt="Casual" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Casual</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="bridal" data-lightbox="./assets/look-9.jpg">
+          <img src="./assets/look-9.jpg" alt="Bridal" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Bridal</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="evening" data-lightbox="./assets/look-10.jpg">
+          <img src="./assets/look-10.jpg" alt="Evening" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Evening</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="traditional" data-lightbox="./assets/look-11.jpg">
+          <img src="./assets/look-11.jpg" alt="Traditional" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Traditional</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="casual" data-lightbox="./assets/look-12.jpg">
+          <img src="./assets/look-12.jpg" alt="Casual" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Casual</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="bridal" data-lightbox="./assets/look-13.jpg">
+          <img src="./assets/look-13.jpg" alt="Bridal" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Bridal</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="evening" data-lightbox="./assets/look-14.jpg">
+          <img src="./assets/look-14.jpg" alt="Evening" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Evening</span>
+        </div>
+        <div class="masonry-item masonry-filterable scroll-reveal" data-category="traditional" data-lightbox="./assets/look-15.jpg">
+          <img src="./assets/look-15.jpg" alt="Traditional" class="w-full" loading="lazy">
+          <span class="pill-tag pill-tag-lavender text-xs mt-2 inline-block">Traditional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Behind the Scenes -->
+  <section class="section-padding" style="background: #FAFAFA;">
+    <div class="content-wrapper">
+      <div class="text-center mb-12 scroll-reveal">
+        <p class="text-eyebrow mb-3">The Craft</p>
+        <h2 class="text-section-title mb-4">Behind the Seams</h2>
+        <p class="text-[#1E1B4B]/60">A glimpse into our atelier — where tradition meets precision.</p>
+      </div>
+
+      <div class="drag-scroll gap-6 pb-4">
+        <div class="w-[400px] flex-shrink-0 scroll-reveal-right">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="./assets/bts-1.jpg" alt="Sketching" class="w-full h-[300px] object-cover">
+          </div>
+          <h3 class="text-lg font-medium mt-4 mb-1" style="font-family: var(--font-display);">Sketching</h3>
+          <p class="text-sm text-[#1E1B4B]/60">Every design begins with a hand-drawn sketch.</p>
+        </div>
+        <div class="w-[400px] flex-shrink-0 scroll-reveal-right stagger-1">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="./assets/bts-2.jpg" alt="Cutting" class="w-full h-[300px] object-cover">
+          </div>
+          <h3 class="text-lg font-medium mt-4 mb-1" style="font-family: var(--font-display);">Cutting</h3>
+          <p class="text-sm text-[#1E1B4B]/60">Precision cutting ensures the perfect shape.</p>
+        </div>
+        <div class="w-[400px] flex-shrink-0 scroll-reveal-right stagger-2">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="./assets/bts-3.jpg" alt="Sewing" class="w-full h-[300px] object-cover">
+          </div>
+          <h3 class="text-lg font-medium mt-4 mb-1" style="font-family: var(--font-display);">Sewing</h3>
+          <p class="text-sm text-[#1E1B4B]/60">Master tailors bring designs to life stitch by stitch.</p>
+        </div>
+        <div class="w-[400px] flex-shrink-0 scroll-reveal-right stagger-3">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="./assets/bts-4.jpg" alt="Fitting" class="w-full h-[300px] object-cover">
+          </div>
+          <h3 class="text-lg font-medium mt-4 mb-1" style="font-family: var(--font-display);">Fitting</h3>
+          <p class="text-sm text-[#1E1B4B]/60">Perfecting every detail during the fitting session.</p>
+        </div>
+        <div class="w-[400px] flex-shrink-0 scroll-reveal-right stagger-4">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="./assets/bts-5.jpg" alt="Finishing" class="w-full h-[300px] object-cover">
+          </div>
+          <h3 class="text-lg font-medium mt-4 mb-1" style="font-family: var(--font-display);">Finishing</h3>
+          <p class="text-sm text-[#1E1B4B]/60">The final press and quality check before delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close absolute top-6 right-6 text-white/80 hover:text-white z-10" aria-label="Close lightbox">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-prev absolute left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white z-10" aria-label="Previous image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox-next absolute right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white z-10" aria-label="Next image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-counter absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: var(--footer-gradient);">
+    <div class="content-wrapper py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="./index.html" class="flex items-center gap-2 mb-4">
+            <span class="text-2xl font-semibold text-[#6B21A8]" style="font-family: var(--font-display);">Fx</span>
+            <span class="text-sm font-medium">Fashionxpression</span>
+          </a>
+          <p class="text-sm text-[#1E1B4B]/70 mb-6">Fashionxpression — Where Heritage Meets Haute Couture.</p>
+        </div>
+        <div>
+          <p class="text-eyebrow mb-4">Quick Links</p>
+          <ul class="space-y-3">
+            <li><a href="./collection.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Collection</a></li>
+            <li><a href="./fabrics.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Fabrics</a></li>
+            <li><a href="./bespoke.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Bespoke</a></li>
+            <li><a href="./measurements.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Measurements</a></li>
+            <li><a href="./lookbook.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Lookbook</a></li>
+            <li><a href="./journal.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-eyebrow mb-4">Our Services</p>
+          <ul class="space-y-3">
+            <li><a href="./bespoke.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Bespoke Tailoring</a></li>
+            <li><a href="./collection.html" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">Ready-to-Wear</a></li>
+            <li><span class="text-sm text-[#1E1B4B]/80">Alterations</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-eyebrow mb-4">Get in Touch</p>
+          <ul class="space-y-3">
+            <li class="text-sm text-[#1E1B4B]/80">12 Admiralty Way, Lekki Phase 1, Lagos</li>
+            <li><a href="tel:+2348034567890" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">+234 803 456 7890</a></li>
+            <li><a href="mailto:hello@fashionxpression.com" class="text-sm text-[#1E1B4B]/80 hover:text-[#6B21A8]">hello@fashionxpression.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="background: var(--soft-navy);" class="py-6">
+      <div class="content-wrapper flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/60 text-xs">&copy; 2026 Fashionxpression. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/60 text-xs hover:text-white">Privacy Policy</a>
+          <a href="#" class="text-white/60 text-xs hover:text-white">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+
+</body>
+</html>
